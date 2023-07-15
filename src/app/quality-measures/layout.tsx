@@ -1,3 +1,5 @@
+import PageHeaderWithMetaActionsAndBreadcrumbs from '@/components/PageHeaderWithMetaActionsAndBreadcrumbs'
+
 import React from 'react'
 
 type Props = {
@@ -6,6 +8,16 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div>{children}</div>
+    <div>
+      <PageHeaderWithMetaActionsAndBreadcrumbs
+        title="Quality Measures"
+        breadcrumbs={[
+          { name: 'Quality Measures', href: '/quality-measures' },
+        ]}
+      />
+      <div className="mt-2">
+        {children}
+      </div>
+    </div>
   )
 }
