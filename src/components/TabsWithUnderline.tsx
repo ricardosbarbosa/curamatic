@@ -34,8 +34,6 @@ export default function TabsWithUnderline({ tabs = [] }: Props) {
               router.push(selectedTab.href)
             }
           }}
-
-
         >
           {tabs.map((tab) => (
             <option key={tab.name}>{tab.name}</option>

@@ -1,22 +1,13 @@
 'use client'
 import { Fragment } from 'react'
 import {
-  BriefcaseIcon,
-  CalendarIcon,
-  CheckIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-  CurrencyDollarIcon,
-  LinkIcon,
-  MapPinIcon,
-  PencilIcon,
 } from '@heroicons/react/20/solid'
 import * as Icons from '@heroicons/react/20/solid'
 import { Menu, Transition } from '@headlessui/react'
 import { classNames } from '@/lib'
 import Link from 'next/link'
-import { JsxElement } from 'typescript'
-
 
 
 type Props = {

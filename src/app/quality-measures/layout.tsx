@@ -8,10 +8,6 @@ type Props = {
 }
 
 export default function Layout({ children }: Props) {
-
-
-
-
   return (
     <div>
       <PageHeaderWithMetaActionsAndBreadcrumbs
@@ -23,7 +19,7 @@ export default function Layout({ children }: Props) {
       <TabsWithUnderline
         tabs={[
           { name: "Performance vs Target", href: '/quality-measures/performance-vs-target' },
-          { name: "YTD Provider Success", href: '/quality-measures/provider-trend-chart', current: false, },
+          { name: "YTD Provider Success", href: '/quality-measures/provider-trend-chart' },
           { name: "Provider Trend Chart", href: '/quality-measures/ytd-provider-success' },
         ]}
       />
