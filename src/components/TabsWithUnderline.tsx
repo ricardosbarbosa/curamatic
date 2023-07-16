@@ -26,7 +26,7 @@ export default function TabsWithUnderline({ tabs = [] }: Props) {
         <select
           id="tabs"
           name="tabs"
-          className="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          className="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm"
           defaultValue={tabCurrent?.name}
           onChange={(e) => {
             const selectedTab = tabs.find((tab) => tab.name === e.target.value)
@@ -49,7 +49,7 @@ export default function TabsWithUnderline({ tabs = [] }: Props) {
                 href={tab.href}
                 className={classNames(
                   tabCurrent?.name === tab.name
-                    ? 'border-indigo-500 text-indigo-600'
+                    ? 'border-sky-500 text-sky-600'
                     : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
                   'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium'
                 )}

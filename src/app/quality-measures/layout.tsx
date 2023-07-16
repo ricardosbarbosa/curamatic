@@ -12,9 +12,7 @@ export default function Layout({ children }: Props) {
     <div>
       <PageHeaderWithMetaActionsAndBreadcrumbs
         title="Quality Measures"
-        breadcrumbs={[
-          { name: 'Quality Measures', href: '/quality-measures' },
-        ]}
+
       />
       <TabsWithUnderline
         tabs={[

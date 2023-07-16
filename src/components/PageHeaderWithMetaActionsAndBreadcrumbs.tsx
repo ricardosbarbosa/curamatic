@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 
 type Props = {
-  breadcrumbs: {
+  breadcrumbs?: {
     name: string
     href: string
   }[]
@@ -26,7 +26,7 @@ type Props = {
   }[]
 }
 
-export default function PageHeaderWithMetaActionsAndBreadcrumbs({ breadcrumbs, title, actions, meta }: Props) {
+export default function PageHeaderWithMetaActionsAndBreadcrumbs({ breadcrumbs = [], title, actions, meta }: Props) {
 
   const breadcrumbsWithHome = [
     { name: 'Home', href: '/' },
@@ -36,7 +36,7 @@ export default function PageHeaderWithMetaActionsAndBreadcrumbs({ breadcrumbs, t
   return (
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="min-w-0 flex-1">
-        <nav className="flex" aria-label="Breadcrumb">
+        {breadcrumbs.length > 0 && (<nav className="flex" aria-label="Breadcrumb">
           <ol role="list" className="flex items-center space-x-4">
             {breadcrumbsWithHome.map((breadcrumb, breadcrumbIdx) => (
               <li key={breadcrumb.name}>
@@ -52,7 +52,7 @@ export default function PageHeaderWithMetaActionsAndBreadcrumbs({ breadcrumbs, t
             ))}
 
           </ol>
-        </nav>
+        </nav>)}
         <div className='flex items-center justify-between'>
           <h2 className="mt-2 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
             {title}
