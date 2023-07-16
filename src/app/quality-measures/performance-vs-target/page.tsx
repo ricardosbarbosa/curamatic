@@ -6,6 +6,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { classNames } from '@/lib'
 import { PrinterIcon, ShareIcon } from '@heroicons/react/24/outline'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
 type Props = {}
 
@@ -21,8 +22,7 @@ export default function Page({ }: Props) {
   )
 }
 
-
-export function Dropdown({ selected, options }: {
+function Dropdown({ selected, options }: {
   selected: string,
   options?: string[]
 }) {
@@ -174,7 +174,7 @@ const columns: {
   ]
 
 
-export function Table() {
+function Table() {
   return (
     <div className="">
       <div className="flex gap-2 flex-wrap items-center justify-between">
@@ -278,10 +278,10 @@ export function Table() {
   )
 }
 
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
 
-export function Pagination() {
+
+function Pagination() {
   return (
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
 
